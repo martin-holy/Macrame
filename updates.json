@@ -3,6 +3,17 @@
       "files": [
         "/Macrame/css/dark.css"
       ]
+    },
+    { "version": "v2023.01.29",
+      "files": [
+        "/Macrame/css/controls.css",
+        "/Macrame/js/xSelect.js",
+        "/Macrame/js/TableLookUp.js",
+        "/Macrame/js/TableGrid.js",
+        "/Macrame/js/TableEdit.js",
+        "/Macrame/js/TableManager.js",
+        "/Macrame/js/stores/MAC_Products.js"
+      ]
     }
   ]
 }
