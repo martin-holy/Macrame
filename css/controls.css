@@ -14,6 +14,7 @@
 
 .tableGrid table tr {
   border-bottom: 1px solid #24282A;
+  height: 21px;
 }
 
 .tableGrid table td {
@@ -47,10 +48,16 @@
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
+  line-height: 18px;
 }
 
 .tableGrid .gridFixed div:first-child {
   border-left: 1px solid black;
+}
+
+.tableGrid .selChar {
+  padding: 0;
+  padding-left: 4px;
 }
 /* End of TableGrid */
 
@@ -137,37 +144,37 @@ input {
 }
 /* End of TableEdit */
 
-/* xSelect */
-.xSelect {
+/* TableLookUp */
+.tableLookUp {
   font-size: 14px;
+  width: 208px;
 }
 
-.xSelect > div {
+.tableLookUp > div:nth-of-type(1) {
   display: flex;
   align-items: center;
   border: 1px solid black;
   border-radius: 2px;
-  height: 24px;
+  min-height: 24px;
   background-color: #33373A;
   padding: 0 2px;
 }
 
-.xSelect .selectedOptions {
+.tableLookUp .selectedRecs {
   flex-grow: 1;
   display: flex;
+  flex-wrap: wrap;
   white-space: nowrap;
   overflow: hidden;
+  padding: 2px 0;
 }
 
-.xSelect .selectedOptions span {
-/*background-color: #2A4151;
-  border: 1px solid black;
-  border-radius: 2px;*/
+.tableLookUp .selectedRecs span {
   padding: 0 2px;
   margin-right: 3px;
 }
 
-.xSelect .button {
+.tableLookUp .button {
   background-color: #24282A;
   min-width: 18px;
   height: 18px;
@@ -181,33 +188,18 @@ input {
   justify-content: center;
 }
 
-.xSelect ul {
-  list-style-type: none;
+.tableLookUp .tableGrid {
   padding: 0;
   margin: 1px 0 0 0;
   position: absolute;
   z-index: 20;
-  border: 1px solid black;
-  border-radius: 2px;
   max-height: 200px;
-  overflow: auto;
-  background-color: #45474B;
-}
-
-.xSelect li {
-  padding: 2px 5px;
-  cursor: pointer;
-}
-
-.xSelect li:hover {
+  height: auto;
+  width: 208px;
+  border-bottom: 1px solid black;
   background-color: #33373A;
 }
-
-.xSelect li div {
-  width: 18px;
-  display: inline-block;
-}
-/* End of xSelect */
+/* End of TableLookUp */
 
 /* InfoCursor */
 .infoCursor {
