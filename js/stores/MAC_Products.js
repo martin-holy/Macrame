@@ -16,7 +16,7 @@ export default {
       { name: 'dimensions', title: 'Rozměry', type: 'text' },
       { name: 'productTypeId', title: 'Druh', type: 'select', required: true, source: { name: 'MAC_ProductTypes', property: 'name' } },
       { name: 'fasteningId', title: 'Zapínání', type: 'select', required: true, source: { name: 'MAC_Fastening', property: 'code' } },
-      { name: 'availability', title: 'Dostupnost', type: 'bool', required: true },
+      { name: 'availability', title: 'Dostupnost', type: 'bool' },
       { name: 'desc', title: 'Popis', type: 'text' }
     ]
   }
