@@ -51,7 +51,6 @@ export default {
       :key="0"
       :schema="store.schema"
       :records="store.records"
-      :showSelected="true"
       :selectedRecs="selectedRecs"
       @recSelected="$_gridRecSelected">
     </table-grid>

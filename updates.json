@@ -14,6 +14,13 @@
         "/Macrame/js/TableManager.js",
         "/Macrame/js/stores/MAC_Products.js"
       ]
+    },
+    { "version": "v2023.01.30",
+      "files": [
+        "/Macrame/css/controls.css",
+        "/Macrame/js/TableManager.js",
+        "/Macrame/js/TableGrid.js"
+      ]
     }
   ]
 }

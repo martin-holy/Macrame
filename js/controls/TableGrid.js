@@ -109,7 +109,7 @@ export default {
     },
 
     $_onScroll(e) {
-      this.$refs.gridFixed.style.left = `${e.target.offsetLeft - e.target.scrollLeft + 1}px`;
+      this.$refs.gridFixed.style.left = `${e.target.scrollLeft}px`;
       this.$_appendRows();
     },
 
@@ -125,14 +125,6 @@ export default {
 
     $_isRecSelected(rec) {
       return this.selectedRecs.includes(rec) ? '✔' : '';
-    },
-
-    $_recSelected(rec) {
-      /*if (!this.isMultiSelect)
-        this.selectedRecs.length = 0;
-
-      this.selectedRecs.push(rec);*/
-      this.$emit('recSelected', rec);
     }
   },
 
@@ -177,7 +169,7 @@ export default {
           <tr
             v-for="rec in gridRecords"
             :key="rec.Id"
-            @click="$_recSelected(rec)">
+            @click="$emit('recSelected', rec)">
             <td
               v-if="showSelected"
               class="selChar">

@@ -1,5 +1,5 @@
 /* TableGrid */
-.tableGrid table {
+.tableGrid > table {
   border-collapse: collapse;
   white-space: nowrap;
   font-size: 12px;
@@ -8,24 +8,30 @@
   width: fit-content;
 }
 
-.tableGrid table tr:hover td {
+.tableGrid > table > tbody > tr:hover > td {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.tableGrid table tr {
+.tableGrid > table > tbody > tr {
   border-bottom: 1px solid #24282A;
   height: 21px;
 }
 
-.tableGrid table td {
+.tableGrid > table > tbody > tr > td,
+.tableGrid > table > thead > tr > th {
   padding: 4px;
 }
 
-.tableGrid table td span {
+.tableGrid > table > td > span {
   padding: 3px;
 }
 
-.tableGrid table th, .tableGrid .gridFixed div {
+.tableGrid > table > thead > tr > th {
+  font-size: 14px;
+  padding: 2px 3px;
+}
+
+.tableGrid .gridFixed div {
   background-color: #24282A;
   border: 1px solid #000000;
   font-size: 14px;
@@ -33,12 +39,13 @@
 }
 
 .tableGrid .gridSource {
-  visibility: hidden;
+  visibility: collapse;
 }
 
 .tableGrid .gridFixed {
   display: flex;
-  position: fixed;
+  position: sticky;
+  top: 0;
 }
 
 .tableGrid .gridFixed div {
@@ -49,10 +56,6 @@
   text-align: center;
   white-space: nowrap;
   line-height: 18px;
-}
-
-.tableGrid .gridFixed div:first-child {
-  border-left: 1px solid black;
 }
 
 .tableGrid .selChar {
@@ -72,7 +75,7 @@
   transform: translate(-50%, -20%);
 }
 
-.tableEdit table {
+.tableEdit > form > table {
   width: 100%;
   font-weight: bold;
   background-color: #24282A;
@@ -80,24 +83,24 @@
   border-radius: 2px;
 }
 
-.tableEdit td:first-child {
+.tableEdit > form > table > tbody > td:first-child {
   border-bottom: 1px solid #33373A;
   white-space: nowrap;
 }
 
-.tableEdit tr:last-child td:first-child {
+.tableEdit > form > table > tbody > tr:last-child td:first-child {
   border-bottom: none;
 }
 
-.tableEdit tr {
+.tableEdit > form > table > tbody > tr {
   height: 32px;
 }
 
-.tableEdit td {
+.tableEdit > form > table > tbody > td {
   padding-left: 4px;
 }
 
-.tableEdit form > div {
+.tableEdit > form > div {
   text-align: center;
   background-color: #24282A;
   border: 1px solid black;
@@ -107,7 +110,7 @@
   justify-content: center;
 }
 
-.tableEdit button {
+.tableEdit > form > div > button {
   background-color: #2A4151;
   border: 1px solid black;
   border-radius: 2px;
@@ -119,25 +122,13 @@
   font-weight: bold;
 }
 
-select, input {
+input {
   background-color: #33373A;
   color: #CBD0D0;
   font-weight: bold;
   border: 1px solid black;
   border-radius: 2px;
   font-family: sans-serif;
-}
-
-select {
-  height: 26px;
-  width: 100%;
-}
-
-option {
-  font-weight: bold;
-}
-
-input {
   height: 22px;
   width: 200px;
   padding-left: 4px;
@@ -165,7 +156,6 @@ input {
   display: flex;
   flex-wrap: wrap;
   white-space: nowrap;
-  overflow: hidden;
   padding: 2px 0;
 }
 
@@ -189,14 +179,13 @@ input {
 }
 
 .tableLookUp .tableGrid {
-  padding: 0;
-  margin: 1px 0 0 0;
   position: absolute;
   z-index: 20;
   max-height: 200px;
   height: auto;
-  width: 208px;
-  border-bottom: 1px solid black;
+  width: 206px;
+  border: 1px solid black;
+  border-top: none;
   background-color: #33373A;
 }
 /* End of TableLookUp */
