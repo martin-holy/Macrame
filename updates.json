@@ -21,6 +21,13 @@
         "/Macrame/js/TableManager.js",
         "/Macrame/js/TableGrid.js"
       ]
+    },
+    { "version": "v2023.01.31",
+      "files": [
+        "/Macrame/css/controls.css",
+        "/Macrame/js/extensions.js",
+        "/Macrame/js/lib/IDb.js"
+      ]
     }
   ]
 }
