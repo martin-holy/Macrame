@@ -83,20 +83,20 @@
   border-radius: 2px;
 }
 
-.tableEdit > form > table > tbody > td:first-child {
+.tableEdit > form > table > tr > td:first-child {
   border-bottom: 1px solid #33373A;
   white-space: nowrap;
 }
 
-.tableEdit > form > table > tbody > tr:last-child td:first-child {
+.tableEdit > form > table > tr:last-child td:first-child {
   border-bottom: none;
 }
 
-.tableEdit > form > table > tbody > tr {
+.tableEdit > form > table > tr {
   height: 32px;
 }
 
-.tableEdit > form > table > tbody > td {
+.tableEdit > form > table > tr > td {
   padding-left: 4px;
 }
 
@@ -160,8 +160,8 @@ input {
 }
 
 .tableLookUp .selectedRecs span {
-  padding: 0 2px;
-  margin-right: 3px;
+  margin: 1px;
+  padding: 2px;
 }
 
 .tableLookUp .button {
