@@ -28,6 +28,14 @@
         "/Macrame/js/extensions.js",
         "/Macrame/js/lib/IDb.js"
       ]
+    },
+    { "version": "v2023.01.31_1",
+      "files": [
+        "/Macrame/js/stores/MAC_Products.js"
+      ]
+    },
+    { "version": "v2023.05.25",
+      "files": []
     }
   ]
 }
