@@ -1,0 +1,33 @@
+{"stores":[
+  {"id":10,"icon":"V","name":"MAC_Products","title":"Produkty","orderBy":"code","orderAsc":true,"properties":[
+    {"name":"id","title":"Id","type":{"name":"number","step":1,"min":0},"required":true,"hidden":true},
+    {"name":"code","title":"Kód","type":{"name":"text"},"required":true},
+    {"name":"title","title":"Název","type":{"name":"text"},"required":true},
+    {"name":"price","title":"Cena","type":{"name":"number","step":0.001,"min":0},"required":true,"align":"right"},
+    {"name":"materials","title":"Materiál","type":{"name":"selectMulti","source":"MAC_Materials","value":"id","title":"name"},"required":true},
+    {"name":"colors","title":"Barvy","type":{"name":"selectMulti","source":"MAC_Colors","value":"id","title":"code"},"required":true},
+    {"name":"dimensions","title":"Rozměry","type":{"name":"text"}},
+    {"name":"productTypeId","title":"Druh","type":{"name":"select","source":"MAC_ProductTypes","value":"id","title":"name"},"required":true},
+    {"name":"fasteningId","title":"Zapínání","type":{"name":"select","source":"MAC_Fastening","value":"id","title":"code"},"required":true},
+    {"name":"availability","title":"Dostupnost","type":{"name":"checkbox"},"align":"center"},
+    {"name":"desc","title":"Popis","type":{"name":"text"}}]},
+  {"id":11,"icon":"W","name":"MAC_Colors","title":"Barvy","orderBy":"code","orderAsc":true,"properties":[
+    {"name":"id","title":"Id","type":{"name":"number","step":1,"min":0},"required":true,"hidden":true},
+    {"name":"code","title":"Kód","type":{"name":"text"},"required":true},
+    {"name":"bgColor","title":"Barva","type":{"name":"text"}}]},
+  {"id":12,"icon":"X","name":"MAC_Fastening","title":"Zapínání","orderBy":"code","orderAsc":true,"properties":[
+    {"name":"id","title":"Id","type":{"name":"number","step":1,"min":0},"required":true,"hidden":true},
+    {"name":"code","title":"Kód","type":{"name":"text"},"required":true},
+    {"name":"desc","title":"Popis","type":{"name":"text"},"required":true}]},
+  {"id":13,"icon":"Y","name":"MAC_Materials","title":"Materiály","orderBy":"name","orderAsc":true,"properties":[
+    {"name":"id","title":"Id","type":{"name":"number","step":1,"min":0},"required":true,"hidden":true},
+    {"name":"name","title":"Název","type":{"name":"text"},"required":true},
+    {"name":"desc","title":"Popis","type":{"name":"text"}}]},
+  {"id":14,"icon":"K","name":"MAC_ProductTypes","title":"Druhy výrobků","orderBy":"name","orderAsc":true,"properties":[
+    {"name":"id","title":"Id","type":{"name":"number","step":1,"min":0},"required":true,"hidden":true},
+    {"name":"name","title":"Název","type":{"name":"text"},"required":true}]}],
+"data":[
+  {"name":"ADM_AppStoreGroups","records":[
+    {"id":2,"name":"Macrame","icon":"V","index":1,"stores":[10,11,12,13,14]}
+  ]}
+]}
